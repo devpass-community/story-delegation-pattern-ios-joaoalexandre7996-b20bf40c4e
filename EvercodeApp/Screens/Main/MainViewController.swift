@@ -32,3 +32,11 @@ final class MainViewController: UIViewController {
         self.present(detailViewController, animated: true)
     }
 }
+
+// MARK: MainViewController
+
+extension MainViewController: DetailViewControllerDelegate {
+    func dismmiss() {
+        self.dismiss(animated: true)
+    }
+}
