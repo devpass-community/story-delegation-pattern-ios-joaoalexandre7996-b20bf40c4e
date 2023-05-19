@@ -27,8 +27,15 @@ final class MainViewController: UIViewController {
     }
     
     @objc func didPressDetailButton() {
-        
-        let detailViewController = DetailViewController()
+        let detailViewController = DetailViewController(delegate: self)
         self.present(detailViewController, animated: true)
+    }
+}
+
+// MARK: MainViewController
+
+extension MainViewController: DetailViewControllerDelegate {
+    func dismmiss() {
+        self.dismiss(animated: true)
     }
 }
